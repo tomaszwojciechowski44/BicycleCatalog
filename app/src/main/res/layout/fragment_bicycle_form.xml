@@ -6,27 +6,33 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/etBicycleName"
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Bicycle Name" />
+        android:hint="@string/hint_bicycle_name"
+        android:inputType="text"
+        android:autofillHints="name" />
 
     <EditText
-        android:id="@+id/etBicycleType"
+        android:id="@+id/editTextType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Bicycle Type" />
+        android:hint="@string/hint_bicycle_type"
+        android:inputType="text"
+        android:autofillHints="type" />
 
     <EditText
-        android:id="@+id/etBicycleDescription"
+        android:id="@+id/editTextDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Description"
-        android:inputType="textMultiLine" />
+        android:hint="@string/hint_bicycle_description"
+        android:inputType="text"
+        android:autofillHints="description" />
 
     <Button
-        android:id="@+id/btnSaveBicycle"
+        android:id="@+id/buttonAddBicycle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save Bicycle" />
+        android:text="@string/button_add_bicycle" />
+
 </LinearLayout>

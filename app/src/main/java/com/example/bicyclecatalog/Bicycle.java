@@ -3,6 +3,11 @@ package com.example.bicyclecatalog;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+/*Diese Klasse definiert eine Entität namens Bicycle für die Room-Datenbank in einer
+Android-Anwendung. Sie wird verwendet, um Fahrräder mit bestimmten
+Eigenschaften (wie Name, Typ, Beschreibung und Datum der Hinzufügung) zu speichern.
+https://chatgpt.com/c/671a1d45-8ad4-8005-a239-de4d2bd38745*/
+
 @Entity(tableName = "bicycle_table")
 public class Bicycle {
 

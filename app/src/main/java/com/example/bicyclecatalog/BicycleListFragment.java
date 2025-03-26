@@ -21,20 +21,15 @@ public class BicycleListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Inflate layout fragment_bicycle_list
         View view = inflater.inflate(R.layout.fragment_bicycle_list, container, false);
 
-        // Znalezienie RecyclerView w layoucie
-        recyclerView = view.findViewById(R.id.recyclerViewBicycles);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerViewBicycles);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        // Tymczasowe dane testowe
-        bicycleList = new ArrayList<>();
-        bicycleList.add(new Bicycle("Mountain Bike", "Off-Road", "Good for mountain riding", "2023-10-10"));
-        bicycleList.add(new Bicycle("Road Bike", "Road", "Lightweight and fast", "2023-09-20"));
+        BicycleDatabase db = BicycleDatabase.getInstance(getContext());
+        List<Bicycle> bicycleList = db.bicycleDao().getAllBicycles();
 
-        // Inicjalizacja adaptera i połączenie go z RecyclerView
-        adapter = new BicycleAdapter(bicycleList);
+        BicycleAdapter adapter = new BicycleAdapter(bicycleList);
         recyclerView.setAdapter(adapter);
 
         return view;

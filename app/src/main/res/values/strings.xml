@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">BicycleCatalog</string>
+    <string name="app_name">Bicycle Catalog</string>
+    <string name="hint_bicycle_name">Enter bicycle name</string>
+    <string name="hint_bicycle_type">Enter bicycle type</string>
+    <string name="hint_bicycle_description">Enter bicycle description</string>
+    <string name="button_add_bicycle">Add New Bicycle</string>
 </resources>
